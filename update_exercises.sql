@@ -19,6 +19,7 @@ FROM albums;
 
 UPDATE albums
 SET  artist = 'Peter Jackson'
+# 'WHERE' basically filters out the unwanted and selects the wanted items
 WHERE artist = 'Michael Jackson';
 
 SELECT name, artist

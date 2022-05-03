@@ -1,12 +1,15 @@
 USE codeup_test_db;
 
-SELECT name
+SELECT 'Albums by Pink Floyd';
+SELECT *
 FROM albums
 WHERE artist = 'Pink Floyd';
 
-SELECT release_date
-FROM albums
-WHERE name = 'Sgt. Pepper''s Lonely Hearts Club Band';
+# alias, after you call up a table 'a' can just be an alias
+
+SELECT a.release_date
+FROM albums a
+WHERE a.name Like 'Sgt. Pepper%';
 
 SELECT genre
 FROM albums
@@ -22,6 +25,7 @@ WHERE sales < 35;
 
 SELECT name
 FROM albums
+# Can put %rock which will find rock ANYWHERE in genre
 WHERE genre = 'Rock';
 
 
